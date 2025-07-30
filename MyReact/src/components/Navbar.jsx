@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/ephraimLogo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,10 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand Name */}
-          <div className="flex-shrink-0">
-            <a href="#" className="text-emerald-900 text-2xl font-bold tracking-wide">
-              Ephraim Gardens
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <a href="#" className="flex items-center gap-2">
+              <img src={logo} alt="Ephraim Gardens Logo" className="h-10 w-10 rounded-full shadow-md border-2 border-amber-400 object-cover" />
+              <span className="text-emerald-900 text-2xl font-bold tracking-wide drop-shadow-sm hover:text-amber-600 transition-colors duration-300">Ephraim Gardens</span>
             </a>
           </div>
 
