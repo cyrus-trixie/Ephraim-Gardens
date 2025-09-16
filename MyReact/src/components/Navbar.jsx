@@ -1,40 +1,41 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Import Link
 import logo from '../assets/ephraimLogo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Amenities', href: '#amenities' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', to: '/' },
+    { name: 'About Us', to: '/about' },
+    { name: 'Amenities', to: '/amenities' },
+    { name: 'Gallery', to: '/gallery' },
+    { name: 'Contact', to: '/contact' },
   ];
 
   return (
-    <nav className="bg-white  fixed w-full z-40 shadow-lg">
+    <nav className="bg-white fixed w-full z-40 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand Name */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <a href="#" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <img src={logo} alt="Ephraim Gardens Logo" className="h-10 w-10 rounded-full shadow-md border-2 border-amber-400 object-cover" />
               <span className="text-emerald-900 text-2xl font-bold tracking-wide drop-shadow-sm hover:text-amber-600 transition-colors duration-300">Ephraim Gardens</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 className="text-emerald-700 hover:text-emerald-900 hover:border-b-2 hover:border-amber-400 pb-1 transition duration-300 ease-in-out font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a
               href="tel:+254726222222"
@@ -66,16 +67,16 @@ const Navbar = () => {
       {/* Mobile Menu Panel */}
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white"> {/* Added bg-white here for consistency */}
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 onClick={() => setIsOpen(false)} // Close menu on click
                 className="text-emerald-800 hover:bg-emerald-50 hover:text-emerald-900 block px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a
               href="tel:+254726222222"
