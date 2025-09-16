@@ -11,6 +11,7 @@ import children from '../assets/images/children.jpg';
 import nature from '../assets/images/nature.webp';
 import event1 from '../assets/images/event1.webp';
 import nature2 from '../assets/images/nature2.webp';
+import emailjs from '@emailjs/browser';
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -128,11 +129,24 @@ const sportsActivities = [
     { icon: Shield, title: 'Clean Facilities', description: 'Pristine, well-maintained facilities throughout' }
   ];
 
-  const handleFormSubmit = () => {
-    // In real implementation, this would send the form data
+ const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Get the keys from the environment variables
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
     if (formData.name && formData.email && formData.message) {
-      alert('Thank you for your inquiry! We\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+      emailjs.send(serviceId, templateId, formData, publicKey)
+        .then((result) => {
+            console.log('Email sent successfully!', result.text);
+            alert('Thank you for your inquiry! We\'ll get back to you soon.');
+            setFormData({ name: '', email: '', message: '' }); 
+        }, (error) => {
+            console.log('Email failed to send...', error.text);
+            alert('Failed to send the message. Please try again later.');
+        });
     } else {
       alert('Please fill in all fields.');
     }
