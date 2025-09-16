@@ -18,12 +18,12 @@ const Home = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   // Hero slider images
-  const heroImages = [
-    { id: 1, src: 'https://images.unsplash.com/photo-1627764940620-90393d0e8c34?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'playing' },
-    { id: 2, src: 'https://images.unsplash.com/photo-1578359968130-76b59bb5af13?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'picnic' },
-    { id: 3, src: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Soccer field' },
-    { id: 4, src: 'https://images.unsplash.com/photo-1718440821712-258a1addf2aa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Sports training' }
-  ];
+ const heroImages = [
+  { id: 1, src: 'https://images.unsplash.com/photo-1627764940620-90393d0e8c34?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Children playing at Ephraim Gardens & Recreation Resort, Muthiga' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1578359968130-76b59bb5af13?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Picnic area at Ephraim Gardens & Recreation Resort, Muthiga' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Soccer field at Ephraim Gardens & Recreation Resort, Muthiga' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1718440821712-258a1addf2aa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Sports training area at Ephraim Gardens & Recreation Resort, Muthiga' }
+];
 
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -46,16 +46,17 @@ const Home = () => {
 
   // Sample images - in real implementation, these would be actual resort photos
   const galleryImages = [
-    { id: 1, src: 'https://lh3.googleusercontent.com/p/AF1QipNSXjfp9yw_qvor-88rTrP5CtH-u7KeajsaTpmP=s680-w680-h510-rw', alt: 'Beautiful garden area', caption: 'Lush Gardens' },
-    { id: 2, src: 'https://lh3.googleusercontent.com/p/AF1QipN3uYO6ewDuAXdV4ZGErUjp_mgDJy-chgA4ViGv=s680-w680-h510-rw', alt: 'Sports field', caption: 'Open Sports Field' },
-    { id: 3, src: 'https://lh3.googleusercontent.com/p/AF1QipP-8vvFJqjYLMDi51SaambC_jeJZdjUDoB2w_26=s680-w680-h510-rw', alt: 'Event space setup', caption: 'Perfect for Events' },
-    { id: 4, src: 'https://lh3.googleusercontent.com/p/AF1QipMD5FXKkT3iCfHKfLMYmmo-Ogqp9dW3E-V3Vh1w=s680-w680-h510-rw', alt: 'Restaurant area', caption: 'Dining Experience' },
-    { id: 5, src: nature, alt: 'Nature walkway', caption: 'Peaceful Walkways' },
-    { id: 6, src: 'https://lh3.googleusercontent.com/p/AF1QipNaO-4EMtOIeIPZ3FZDjquCX9YFfJWTKq5bVxLp=s680-w680-h510-rw', alt: 'Scenic view', caption: 'Breathtaking Views' },
-    { id: 7, src: nature2, alt: 'Nature', caption: 'Nature' },
-    { id: 8, src: 'https://lh3.googleusercontent.com/p/AF1QipPNt0kUPFIf0gOPbhmCt_l9E9vS9Rh8m6jFUoSn=s680-w680-h510-rw', alt: 'Football field', caption: 'Vollaball/Football Field' },
-    { id: 9, src: event1, alt: 'events', caption: 'Events' }
-  ];
+  { id: 1, src: 'https://lh3.googleusercontent.com/p/AF1QipNSXjfp9yw_qvor-88rTrP5CtH-u7KeajsaTpmP=s680-w680-h510-rw', alt: 'Lush garden area at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Lush Gardens' },
+  { id: 2, src: 'https://lh3.googleusercontent.com/p/AF1QipN3uYO6ewDuAXdV4ZGErUjp_mgDJy-chgA4ViGv=s680-w680-h510-rw', alt: 'Open sports field at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Open Sports Field' },
+  { id: 3, src: 'https://lh3.googleusercontent.com/p/AF1QipP-8vvFJqjYLMDi51SaambC_jeJZdjUDoB2w_26=s680-w680-h510-rw', alt: 'Event space setup at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Perfect for Events' },
+  { id: 4, src: 'https://lh3.googleusercontent.com/p/AF1QipMD5FXKkT3iCfHKfLMYmmo-Ogqp9dW3E-V3Vh1w=s680-w680-h510-rw', alt: 'Restaurant dining area at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Dining Experience' },
+  { id: 5, src: nature, alt: 'Nature walkway at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Peaceful Walkways' },
+  { id: 6, src: 'https://lh3.googleusercontent.com/p/AF1QipNaO-4EMtOIeIPZ3FZDjquCX9YFfJWTKq5bVxLp=s680-w680-h510-rw', alt: 'Scenic view at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Breathtaking Views' },
+  { id: 7, src: nature2, alt: 'Nature scenery at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Nature' },
+  { id: 8, src: 'https://lh3.googleusercontent.com/p/AF1QipPNt0kUPFIf0gOPbhmCt_l9E9vS9Rh8m6jFUoSn=s680-w680-h510-rw', alt: 'Football/volleyball field at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Vollaball/Football Field' },
+  { id: 9, src: event1, alt: 'Events area at Ephraim Gardens & Recreation Resort, Muthiga', caption: 'Events' }
+];
+
 
   const testimonials = [
     {
