@@ -346,7 +346,8 @@ const sportsActivities = [
           ],
           cta: 'Bring your friends and family for a day of adventure!',
           contacts: [
-            { name: 'John', phone: '+254700000000' },
+            { name: 'Kate', phone: '+254745919893' },
+            { name: 'Alice', phone: '+254726518746' },
           ],
           image: eventImg2,
         },
@@ -363,7 +364,8 @@ const sportsActivities = [
           ],
           cta: 'Register your team and compete for glory!',
           contacts: [
-            { name: 'Coach Mike', phone: '+254711223344' },
+            { name: 'Kate', phone: '+254745919893' },
+            { name: 'Alice', phone: '+254726518746' },
           ],
           image: eventImg3,
         },
