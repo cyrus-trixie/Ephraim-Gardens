@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'be-vietnam-pro': ['"Be Vietnam Pro"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
-}
+};
