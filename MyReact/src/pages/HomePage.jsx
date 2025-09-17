@@ -221,10 +221,10 @@ export default function HomePage() {
           
           <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="animate-fade-in-up">
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight animate-bounce-in">
+              <div data-aos="fade-up">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
                   Ephraim Gardens
-                  <span className="block text-3xl md:text-4xl font-light text-amber-200 mt-2 animate-slide-in-right">
+                  <span className="block text-2xl sm:text-3xl md:text-4xl font-light text-amber-200 mt-2">
                     & Recreation Resort
                   </span>
                 </h1>
@@ -234,7 +234,7 @@ export default function HomePage() {
                 <p className="text-base md:text-lg mb-8 text-amber-100 animate-fade-in-delay-2" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.5)' }}>
                   From competitive sports to memorable celebrations, find your perfect space with us.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay-3">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <button 
                     onClick={() => window.location.href = 'tel:254726222222'}
                     className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 transform hover:scale-110 hover:rotate-2 shadow-lg animate-pulse-glow"
@@ -273,11 +273,11 @@ export default function HomePage() {
         </section>
 
         {/* Sports & Recreation Section */}
-        <section id="sports" className="py-24 px-6 bg-white">
+        <section id="sports" className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             {/* Section Heading */}
             <div className="text-center mb-20" data-aos="fade-up">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-emerald-800 mb-4 tracking-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-800 mb-4 tracking-tight">
                 Sports & Recreation Hub
               </h2>
       <p className="text-base md:text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
@@ -310,9 +310,9 @@ export default function HomePage() {
         
             {/* CTA Box */}
             <div className="mt-24 text-center">
-              <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-10 text-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105" data-aos="fade-up">
+              <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-3xl p-6 sm:p-10 text-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105" data-aos="fade-up">
                 <Trophy className="w-16 h-16 mx-auto text-amber-300 mb-4 animate-bounce-subtle" />
-                <h3 className="text-3xl font-extrabold mb-3">Special School Programs</h3>
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-3">Special School Programs</h3>
                 <p className="text-base md:text-lg text-emerald-100 mb-6 max-w-2xl mx-auto leading-relaxed">
                   Give your students the space to excel. We offer special discounted rates for school sports days, training sessions, and events.
                 </p>
@@ -328,10 +328,10 @@ export default function HomePage() {
         </section>
         
         {/* Events Section */}
-        <section id="events" className="py-20 px-4 bg-stone-50">
+        <section id="events" className="py-16 sm:py-20 px-4 bg-stone-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12" data-aos="fade-up">
-              <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4 tracking-tight">Upcoming Events</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-4 tracking-tight">Upcoming Events</h2>
               <p className="text-base md:text-lg text-stone-600 max-w-2xl mx-auto">Join us for our special events! Enjoy fun, food, and entertainment for the whole family.</p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -423,7 +423,7 @@ export default function HomePage() {
         </section>
         
         {/* About Section */}
-        <section id='about' className="py-20 px-4 bg-stone-50">
+        <section id='about' className="py-16 sm:py-20 px-4 bg-stone-50">
           <div className="max-w-6xl mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="flex justify-center mb-6">
               <div className="flex items-center gap-1">
@@ -432,7 +432,7 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-8 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-8 tracking-tight">
               Where Sports Meets Nature
             </h2>
             <div className="max-w-4xl mx-auto">
@@ -467,9 +467,9 @@ export default function HomePage() {
         </section>
         
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-20 px-4 bg-stone-50">
+        <section id="testimonials" className="py-16 sm:py-20 px-4 bg-stone-50">
           <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-12 tracking-tight">What People Say</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-12 tracking-tight">What People Say</h2>
         
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial, index) => (
@@ -499,10 +499,10 @@ export default function HomePage() {
         </section>
         
         {/* Amenities Section */}
-        <section id="amenities" className="py-20 px-4 bg-white">
+        <section id="amenities" className="py-16 sm:py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
-              <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-6 tracking-tight">
                 Complete Facilities
               </h2>
               <p className="text-base md:text-lg text-stone-600 max-w-2xl mx-auto">
@@ -571,10 +571,10 @@ export default function HomePage() {
         </section>
         
         {/* Contact Section */}
-        <section id="contact" className="py-20 px-4 bg-gradient-to-br from-emerald-800 to-emerald-900 text-white">
+        <section id="contact" className="py-16 sm:py-20 px-4 bg-gradient-to-br from-emerald-800 to-emerald-900 text-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16" data-aos="fade-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
                 Book the Perfect Venue
               </h2> 
               <p className="text-base md:text-lg text-emerald-100">
