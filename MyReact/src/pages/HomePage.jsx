@@ -466,37 +466,7 @@ export default function HomePage() {
           </div>
         </section>
         
-        {/* Testimonials Section */}
-        <section id="testimonials" className="py-20 px-4 bg-stone-50">
-          <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-12 tracking-tight">What People Say</h2>
-        
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  data-aos="fade-up" data-aos-delay={index * 100}
-                  key={index}
-                  className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center"
-                >
-                  <p className="text-stone-700 mb-4 text-base md:text-lg">
-                    "{testimonial.text}"
-                  </p>
-        
-                  <div className="flex flex-col items-center mb-3">
-                    <span className="font-semibold text-emerald-800">{testimonial.name}</span>
-                    <span className="text-stone-500 text-sm">{testimonial.role}</span>
-                  </div>
-        
-                  <div className="flex gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      
         
         {/* Amenities Section */}
         <section id="amenities" className="py-20 px-4 bg-white">
@@ -534,6 +504,37 @@ export default function HomePage() {
           </div>
         </section>
 
+  {/* Testimonials Section */}
+        <section id="testimonials" className="py-20 px-4 bg-stone-50">
+          <div className="max-w-6xl mx-auto text-center" data-aos="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-12 tracking-tight">What People Say</h2>
+        
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  data-aos="fade-up" data-aos-delay={index * 100}
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center"
+                >
+                  <p className="text-stone-700 mb-4 text-base md:text-lg">
+                    "{testimonial.text}"
+                  </p>
+        
+                  <div className="flex flex-col items-center mb-3">
+                    <span className="font-semibold text-emerald-800">{testimonial.name}</span>
+                    <span className="text-stone-500 text-sm">{testimonial.role}</span>
+                  </div>
+        
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       
         {/* Photo Gallery */}
         <section id="gallery" className="py-20 px-4 bg-stone-50">
