@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, X } from 'lucide-react'; // Import X for the close icon
 import bannerImage from '../assets/images/nature2.webp';
 import emailjs from '@emailjs/browser';
@@ -26,6 +26,10 @@ export default function ContactPage() {
         email: '',
         message: '',
     });
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const [popup, setPopup] = useState({ visible: false, message: '', isSuccess: false });
 

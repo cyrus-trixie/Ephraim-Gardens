@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import Slider from "react-slick";
 import { Camera } from "lucide-react";
@@ -31,6 +31,10 @@ const images = [
 export default function GalleryPage() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const openModal = (index) => {
         setCurrentIndex(index);

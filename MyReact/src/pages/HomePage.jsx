@@ -65,6 +65,7 @@ export default function HomePage() {
       once: true,             // Animate elements only once
       offset: 100,            // Trigger animations a little sooner
     });
+    window.scrollTo(0, 0);
   }, []);
 
   // Sample images - in real implementation, these would be actual resort photos
