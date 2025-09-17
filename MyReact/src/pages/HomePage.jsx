@@ -186,7 +186,7 @@ export default function HomePage() {
   return (
     <>
 
-      <div className="min-h-screen bg-stone-50">
+      <div className="min-h-screen bg-stone-50 overflow-hidden">
 
         {/* Hero Section with Image Slider */}
         <section id="home" className="relative h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 overflow-hidden">
