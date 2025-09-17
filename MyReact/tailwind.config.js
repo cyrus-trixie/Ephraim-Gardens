@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'be-vietnam-pro': ['"Be Vietnam Pro"', 'sans-serif'],
+        urbanist: ['Urbanist', 'sans-serif'],
       },
     },
   },
