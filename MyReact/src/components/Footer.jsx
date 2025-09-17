@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
-
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <footer className="bg-emerald-900 text-white py-12 relative overflow-hidden">
@@ -27,19 +27,19 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/gallery" className="hover:text-amber-400 transition-colors">
+              <Link to="/gallery" className="hover:text-amber-400 transition-colors">
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-amber-400 transition-colors">
+              <Link to="/about" className="hover:text-amber-400 transition-colors">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-amber-400 transition-colors">
+              <Link to="/contact" className="hover:text-amber-400 transition-colors">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
